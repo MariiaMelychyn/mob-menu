@@ -1,0 +1,235 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #757575;
+  background-color: #fffffff;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.web {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+
+  color: #2196f3;
+}
+.studio {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+}
+.nav {
+  display: flex;
+  gap: 50px;
+  margin-left: 93px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    gap: 50px;
+    margin-left: 250px;
+  }
+}
+
+.nav__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+.nav__contact {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.nav__link:hover,
+.nav__link:focus,
+.nav__contact:hover,
+.nav__contact:focus {
+  color: #2196f3;
+}
+
+
+
+
+
+/* 1) Перше робимо мобільне меню яке буде хедер ховати до 768 рх а буде до 768рх відображатись модальне вікно */
+
+/* СКРИВАЄМО ОСНОВНЕ МЕНЮ */
+@media screen and (max-width: 767px) {
+  .header-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .header-menu {
+    display: flex;
+    margin-left: auto;
+  }
+}
+/*  */
+
+/* МЕНЮ ВІДКРИТТЯ -КНОПКА*/
+.menu-toggle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 0;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+/*  */
+
+/* 2) задаємо логотипу та моб меню відступи  */
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+}
+
+/* 3) стилі до кнопки закриття */
+.button-toggle {
+  position: absolute;
+  top: 10px;
+  right: 65px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+
+    & .button-toggle__icone {
+      fill: red;
+    }
+  }
+}
+
+.button-toggle__icone {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 250ms $timingFunction;
+}
+
+/* ЗАДАЄМО СТИЛІ ДО menu-container  */
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  transform: translateX(100%);
+  /* transition: transform 500ms linear; */
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+/* ЗАДАЄМО СТИЛІ НА НА МОДАЛЬНЕ ВІКНО*/
+.current {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+
+  color: #212121;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+.soc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+
+  letter-spacing: 0.02em;
+
+  color: #2196f3;
+}
+.tel {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+
+  letter-spacing: 0.02em;
+
+  color: #2196f3;
+}
+.email {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+
+  color: #757575;
+}
+

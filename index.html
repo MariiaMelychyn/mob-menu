@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <header class="header container">
+  
+        
+        <a href=""><span class="web">Web</span><span class="studio">Studio</span></a>
+              <!--  -->
+              <button class="menu-toggle js-open-menu" 
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+          <svg class="menu__batton" height="24" width="24">
+              <use href="./images/symbol-defs.svg#menu_btn"></use>
+          </svg>
+      </button>
+              <!--  -->
+               <div class="header-menu">
+        <nav>
+            <ul class="nav">
+                <li><a class="nav__link" href="">Студія</a></li>
+                <li><a class="nav__link" href="">Портфоліо</a></li>
+                <li><a class="nav__link" href="">Контакти</a></li>
+            </ul>
+        </nav>
+        <ul class="contact">
+            <li><a class="nav__contact" href="">info@devstudio.com</a></li>
+            <li><a class="nav__contact" href="">+38 096 111 11 11</a></li>
+        </ul>
+    </div>
+  
+    </header>
+
+    <!-- mobile-menu -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="button-toggle js-close-menu">
+        <svg class="button-toggle__icone">
+            <use href="./images/symbol-defs.svg#close"></use>
+        </svg>
+    </button>
+
+    <nav>
+        <ul class="mob-menu">
+            <li><a href="./index.html" class="current">Студія</a></li>
+            <li><a href="./portfolio.html" class="current">Портфоліо</a></li>
+            <li><a href="" class="current">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="mob-menu__contacts">
+        <a href="tel:+380961111111" class="tel">
+            <p>+38 096 111 11 11</p>
+        </a>
+
+        <a href="mailto:info@devstudio.com" lang="en" class="email">
+            <p>info@devstudio.com</p>
+        </a>    
+    </div>
+
+    <div>
+        <ul class="social">
+            <li>
+                <a href="" class="soc">Instagram</a>
+            </li>
+
+            <li>
+                <a href="" class="soc">Twitter</a>
+            </li>
+
+            <li>
+                <a href="" class="soc">Facebook</a>
+            </li>
+
+            <li>
+                <a href="" class="soc">LinkedIn</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+    <script src="./js/menu-btn.js"></script>
+</body>
+</html>
